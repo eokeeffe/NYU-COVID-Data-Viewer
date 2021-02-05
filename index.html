@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="description" content="COVID-19 tracking data">
+	<meta name="author" content="Evan O'Keeffe NYU">
+    <!--
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+   
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+   <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+   -->
+   
+   <link rel="stylesheet" href="./css/leaflet.css"/>
+   
+   <script src="./libs/jquery-3.5.1.min.js"></script>
+   
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="./libs/leaflet.js"></script>
+   
+   <!-- kml/z library loader -->
+   <script src='./libs/leaflet-omnivore.min.js'></script>
+   
+   <!-- Search box and functionality libraries -->
+   <script src='./libs/leaflet-search.min.js'></script>
+   <script src='./libs/fuse.js'></script>
+   <link rel="stylesheet" href="./libs/leaflet-search.min.css"/>
+   
+   <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #mapid {
+            height: 100%;
+            width: 100%;
+        }
+   </style>
+</head>
+
+<body>
+    <div id="mapid"></div>
+    <input id='search' class='search-ui' placeholder='Enter Data Name' />
+    
+    <script>
+        var mymap = L.map('mapid').setView([40.7385 ,  -73.9711], 13);
+        
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiZXZhbm9rIiwiYSI6ImNra3FzNHJmdjM4d28yb3F0YnRiN3owaG0ifQ.1STNlFlEdByWEJkvPI2qrQ'
+        }).addTo(mymap);
+        
+        var geojsonMarkerOptions = {
+            radius: 8,
+            fillColor: "#ff7800",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+        };
+        
+        var customLayer = L.geoJson(null, {
+            pointToLayer: function (feature, latlng) {
+                return L.circleMarker(latlng, geojsonMarkerOptions);
+            }
+        });
+        
+        var covid_data_layer = omnivore.kml('http://localhost:8000/Example/websitetest.kml', null, customLayer)
+            .on('ready', function() {
+                covid_data_layer.eachLayer(function(layer) {
+                    console.log(layer.feature);
+                });
+                
+                mymap.fitBounds(covid_data_layer.getBounds());
+                console.log("Data ready");
+            })
+            .on('error', function() {
+                // fired if the layer can't be loaded over AJAX
+                // or can't be parsed
+                console.log("Error collecting data");
+            });
+        
+        mymap.addLayer(covid_data_layer);
+        
+        /*
+        var fuse = new Fuse(covid_data_layer.features, {
+		    keys: [
+			    'properties.name',
+			    'properties.descriptio'
+		    ]
+	    });
+        */
+        
+        var searchControl = new L.Control.Search({
+		    layer: covid_data_layer,
+		    propertyName: 'layer',
+		    marker: false,
+		    collapsed: false,
+		    textPlaceholder: "layer name to search by",
+		    autoType: true,
+		    moveToLocation: function(latlng, title, map) {
+			    //map.fitBounds( latlng.layer.getBounds() );
+			    var zoom = map.getBoundsZoom(latlng.layer.getBounds());
+      			map.setView(latlng, zoom); // access the zoom
+		    },
+		    /*
+		    filterData: function(text, records) {
+			    var jsons = fuse.search(text) , ret = {}, key;
+			
+			    for(var i in jsons) {
+				    key = jsons[i].properties.name;
+				    ret[ key ]= records[key];
+			    }
+
+			    console.log(jsons,ret);
+			    return ret;
+		    }
+		    */
+	    });
+	    
+	    searchControl.on('search:locationfound', function(e) {
+		
+		    console.log('search:locationfound', );
+
+		    //map.removeLayer(this._markerSearch)
+
+		    e.layer.setStyle({fillColor: '#3f0', color: '#0f0'});
+		    if(e.layer._popup)
+			    e.layer.openPopup();
+
+	    }).on('search:collapsed', function(e) {
+	        console.log("search bar collapsed");
+	        /*
+		    featuresLayer.eachLayer(function(layer) {	//restore feature color
+			    featuresLayer.resetStyle(layer);
+		    });
+		    */	
+	    });
+	    
+	    mymap.addControl( searchControl );  //inizialize search control
+        
+    </script>
+</body>
+
+</html>
