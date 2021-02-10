@@ -1,39 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="/manifest.appcache">
 <head>
     <meta charset="utf-8">
 	<meta name="description" content="COVID-19 tracking data">
 	<meta name="author" content="Evan O'Keeffe NYU">
     <!--
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
    
-   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
    
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
-   <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
-   -->
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+    -->
    
-   <link rel="stylesheet" href="./css/leaflet.css"/>
+    <link rel="stylesheet" href="./css/leaflet.css"/>
    
-   <script src="./libs/jquery-3.5.1.min.js"></script>
+    <script src="./libs/jquery-3.5.1.min.js"></script>
    
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="./libs/leaflet.js"></script>
    
-   <!-- kml/z library loader -->
-   <script src='./libs/leaflet-omnivore.min.js'></script>
+    <!-- kml/z library loader -->
+    <script src='./libs/leaflet-omnivore.min.js'></script>
    
-   <!-- Search box and functionality libraries -->
-   <script src='./libs/leaflet-search.min.js'></script>
-   <script src='./libs/fuse.js'></script>
-   <link rel="stylesheet" href="./libs/leaflet-search.min.css"/>
-   
-   <style>
+    <!-- Search box and functionality libraries -->
+    <script src='./libs/fuse.min.js'></script>
+    <script src='./libs/leaflet.fusesearch.js'></script>
+    
+    <link rel="stylesheet" href="./css/leaflet.fusesearch.css"/>
+    
+    <script src='./libs/sql-wasm.js'></script>
+    
+    <script>
+        var db = null;
+        var db_content = null;
+        var db_ready = false;
+        var xhr = new XMLHttpRequest();
+        
+        config = {
+            locateFile: filename => `./libs/${filename}`
+        }
+        
+        xhr.open('GET', './data/geodata.sqlite', true);
+        xhr.responseType = 'arraybuffer';
+
+        xhr.onload = function(e) {
+            db_content = new Uint8Array(this.response);
+            console.log("database downloaded");
+        };
+        xhr.send();
+        
+        
+        initSqlJs(config).then(function(SQL){
+          //Create the database
+          db = new SQL.Database(db_content);
+          console.log("database ready");
+          db_ready = true;
+        });
+    </script>
+    
+    <style>
         body {
             padding: 0;
             margin: 0;
@@ -42,14 +73,53 @@
             height: 100%;
             width: 100%;
         }
-   </style>
+    </style>
 </head>
 
 <body>
     <div id="mapid"></div>
+    
+    <!--
     <input id='search' class='search-ui' placeholder='Enter Data Name' />
+    <input id='search_country' class='search-ui' placeholder='Enter Country Name' />
+    -->
     
     <script>
+        function simpleReverseGeocoding(longitude, latitude) {
+            try{
+                var scale = Math.pow(Math.cos(latitude * Math.PI / 180), 2);
+                var query = `
+                    SELECT * FROM everything WHERE id IN ( 
+                        SELECT feature_id 
+                        FROM coordinates 
+                        WHERE latitude BETWEEN ${latitude} - 1.5 AND ${latitude} + 1.5 
+                        AND longitude BETWEEN ${longitude} - 1.5 AND ${longitude} + 1.5 
+                        ORDER BY ( 
+                            (${latitude} - latitude) * (${latitude} - latitude) + (${longitude} - longitude) * (${longitude} - longitude) * ${scale} 
+                        ) ASC 
+                        LIMIT 1
+                    );`;
+
+                // Prepare a statement
+                let stmt = db.exec(query);
+          
+                var response= {};
+          
+                //console.log(stmt[0]);
+                //console.log(stmt[0].columns);
+                //console.log(stmt[0].values[0],stmt[0].values[0].length);
+          
+                for(var i=0; i< stmt[0].values[0].length; i++){
+                    //console.log(stmt[0].columns[i], stmt[0].values[0][i]);
+                    response[stmt[0].columns[i]] = stmt[0].values[0][i];
+                }
+                //console.log(response);
+                return response;
+            }catch(err){
+                return null;
+            }
+        }
+    
         var mymap = L.map('mapid').setView([40.7385 ,  -73.9711], 13);
         
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -73,83 +143,135 @@
         var customLayer = L.geoJson(null, {
             pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, geojsonMarkerOptions);
+            },
+            onEachFeature: function(feature, layer) {
+                //feature.layer = layer;
+                layer.bindPopup(feature.properties.name);
             }
         });
         
-        var covid_data_layer = omnivore.kml('http://localhost:8000/Example/websitetest.kml', null, customLayer)
+        function sleep(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        
+        var searchCtrl = null;
+        var categories = [
+                'name',
+			    'description',
+			    'has_mask',
+			    'month',
+			    'year',
+			    'day',
+			    'state_district',
+			    'gender',
+			    'number_of_people',
+			    'country',
+		];
+			
+		var options = {
+                position: 'topright',
+                title: 'Search',
+                placeholder: 'name,description,has_mask,month,year,gender,number_of_people,state_district',
+                maxResultLength: 15,
+                threshold: 0.5,
+                showInvisibleFeatures: true,
+                showResultFct: function(feature, container) {
+                    props = feature.properties;
+                    var name = L.DomUtil.create('b', null, container);
+                    name.innerHTML = props.layer;
+                    
+                    container.appendChild(L.DomUtil.create('br', null, container));
+                    
+                    var cat = props.layer ? props.country : props.has_mask,
+                        info = '' + cat + ', ' + props.state_district;
+                    container.appendChild(document.createTextNode(info));
+                }
+        };
+        
+        async function waitForDB(){	
+            //need to wait for X seconds to get the database downloaded
+            await sleep(4000);
+            console.log("wait complete for DB");
+            
+            loadData("http://localhost:8000/Example/websitetest.kml")
+        }
+        
+        async function loadData(url){     
+            var current_layer = omnivore.kml(url, null, customLayer)
             .on('ready', function() {
-                covid_data_layer.eachLayer(function(layer) {
-                    console.log(layer.feature);
+                console.log(url," data loaded");
+                
+                var counter = 1;
+                var once = false;
+                    
+                current_layer.eachLayer(function(layer) {
+                    layer.feature.properties.id = counter++;
+                    
+                    try{
+                        layer.feature.coordinates
+                    }catch(err){
+                        //console.log(err.message);
+                    }
+                    
+                    try{
+                        var lng = layer.feature.geometry.coordinates[0][0];
+                        var lat = layer.feature.geometry.coordinates[0][1]
+                        
+                        var response = simpleReverseGeocoding(lng,lat);
+                            
+                        layer.feature.properties.country = response.country_name;
+                        layer.feature.properties.state_district = response.admin1_name;
+                        layer.feature.properties.country_code = response.country_id;
+                        
+                    }catch(err){
+                        //console.log(err.message);
+                    }
+                                        
+                    var date_year = layer.feature.properties.name.substring(0, 4);
+                    var date_month = layer.feature.properties.name.substring(4, 6);
+                    var date_day = layer.feature.properties.name.substring(6, 8);
+                    var username = layer.feature.properties.name.substring(8, layer.feature.properties.name.length);
+                    
+                    try{
+                        var res = layer.feature.properties.descriptio.split(",");
+                        var gender = res[0];
+                        var number_of_people  = res[1];
+                        var remainder = res.slice(2, res.length)
+                        var rest_of_description = String(remainder.join());
+                        var has_mask = rest_of_description.toLowerCase().includes("mask");
+                        
+                        layer.feature.properties.year = date_year;
+                        layer.feature.properties.month = date_month;
+                        layer.feature.properties.day = date_day;
+                        layer.feature.properties.gender = gender;
+                        layer.feature.properties.number_of_people = number_of_people;
+                        layer.feature.properties.has_mask = has_mask;
+                        layer.feature.properties.description = rest_of_description;
+                    }
+                    catch(err) {
+                        //console.log(err.message);
+                    }
+                    if(once){
+                        console.log(layer.feature);
+                        once = false;
+                    }
                 });
                 
-                mymap.fitBounds(covid_data_layer.getBounds());
-                console.log("Data ready");
+                console.log(current_layer);
+                
+                mymap.addLayer(current_layer);
+                searchCtrl = L.control.fuseSearch(options);
+                mymap.addControl(searchCtrl);
+                searchCtrl.indexFeatures(current_layer.features, categories);
             })
             .on('error', function() {
                 // fired if the layer can't be loaded over AJAX
                 // or can't be parsed
-                console.log("Error collecting data");
+                console.log("Error loading ", url ," data");
             });
+        };
         
-        mymap.addLayer(covid_data_layer);
-        
-        /*
-        var fuse = new Fuse(covid_data_layer.features, {
-		    keys: [
-			    'properties.name',
-			    'properties.descriptio'
-		    ]
-	    });
-        */
-        
-        var searchControl = new L.Control.Search({
-		    layer: covid_data_layer,
-		    propertyName: 'layer',
-		    marker: false,
-		    collapsed: false,
-		    textPlaceholder: "layer name to search by",
-		    autoType: true,
-		    moveToLocation: function(latlng, title, map) {
-			    //map.fitBounds( latlng.layer.getBounds() );
-			    var zoom = map.getBoundsZoom(latlng.layer.getBounds());
-      			map.setView(latlng, zoom); // access the zoom
-		    },
-		    /*
-		    filterData: function(text, records) {
-			    var jsons = fuse.search(text) , ret = {}, key;
-			
-			    for(var i in jsons) {
-				    key = jsons[i].properties.name;
-				    ret[ key ]= records[key];
-			    }
-
-			    console.log(jsons,ret);
-			    return ret;
-		    }
-		    */
-	    });
-	    
-	    searchControl.on('search:locationfound', function(e) {
-		
-		    console.log('search:locationfound', );
-
-		    //map.removeLayer(this._markerSearch)
-
-		    e.layer.setStyle({fillColor: '#3f0', color: '#0f0'});
-		    if(e.layer._popup)
-			    e.layer.openPopup();
-
-	    }).on('search:collapsed', function(e) {
-	        console.log("search bar collapsed");
-	        /*
-		    featuresLayer.eachLayer(function(layer) {	//restore feature color
-			    featuresLayer.resetStyle(layer);
-		    });
-		    */	
-	    });
-	    
-	    mymap.addControl( searchControl );  //inizialize search control
-        
+        waitForDB();
     </script>
 </body>
 
