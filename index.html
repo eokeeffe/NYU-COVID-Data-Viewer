@@ -30,11 +30,30 @@
    
     <!-- Search box and functionality libraries -->
     <script src='./libs/fuse.min.js'></script>
-    <script src='./libs/leaflet.fusesearch.js'></script>
-    
+    <script src='./libs/leaflet.fusesearch.js'></script>    
     <link rel="stylesheet" href="./css/leaflet.fusesearch.css"/>
     
+    <!-- For overlay menu tree selection -->
+    <link rel="stylesheet" href="./css/L.Control.Layers.Tree.css" crossorigin=""/>
+    <script src="./libs/L.Control.Layers.Tree.js"></script>
+    
+    <!-- SQL reading dependencies -->
     <script src='./libs/sql-wasm.js'></script>
+    
+    <style>
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        .info h4 {
+            margin: 0 0 5px;
+            color: #777;
+        }
+    </style>
     
     <script>
         var db = null;
@@ -124,28 +143,45 @@
         
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 18,
+            maxZoom: 22,
             id: 'mapbox/streets-v11',
             tileSize: 512,
             zoomOffset: -1,
             accessToken: 'pk.eyJ1IjoiZXZhbm9rIiwiYSI6ImNra3FzNHJmdjM4d28yb3F0YnRiN3owaG0ifQ.1STNlFlEdByWEJkvPI2qrQ'
         }).addTo(mymap);
         
-        var geojsonMarkerOptions = {
-            radius: 8,
-            fillColor: "#ff7800",
-            color: "#000",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: 0.8
-        };
+        function getColor(d) {
+            if(d){
+                return '#800026';
+            }else{
+                return '#800026';
+            }
+            /*
+            return d > 1000 ? '#800026' :
+                   d > 500  ? '#BD0026' :
+                   d > 200  ? '#E31A1C' :
+                   d > 100  ? '#FC4E2A' :
+                   d > 50   ? '#FD8D3C' :
+                   d > 20   ? '#FEB24C' :
+                   d > 10   ? '#FED976' :
+                              '#FFEDA0';
+            */
+        }
+        
+        function style(feature) {
+            return {
+                fillColor: getColor(feature.properties.has_mask),
+                weight: 5,
+                opacity: 1,
+                color: 'red',
+                //dashArray: '3',
+                fillOpacity: 0.7
+            };
+        }
         
         var customLayer = L.geoJson(null, {
-            pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, geojsonMarkerOptions);
-            },
             onEachFeature: function(feature, layer) {
-                //feature.layer = layer;
+                feature.layer = layer;
                 layer.bindPopup(feature.properties.name);
             }
         });
@@ -155,40 +191,72 @@
         }
         
         var searchCtrl = null;
-        var categories = [
-                'name',
-			    'description',
-			    'has_mask',
-			    'month',
-			    'year',
-			    'day',
-			    'state_district',
-			    'gender',
-			    'number_of_people',
-			    'country',
+        var search_categories = [
+        /*
+                'properties.name',
+			    'properties.description',
+			    'properties.has_mask',
+			    'properties.month',
+			    'properties.year',
+			    'properties.day',
+		*/
+			    'properties.state_district',
+		/*  
+			    'properties.gender',
+			    'properties.number_of_people',
+			    'properties.country',
+		*/
 		];
-			
+		
+		// Object to store category layers
+        var overlays = {};
+		/*
+		var baseTree = {
+            label: 'Base Layers',
+            children: [
+                {label:'region',children:[]}
+            ],
+        };
+		var controlLayers = L.control.layers.tree(baseTree, overlaysTree,
+        {
+                namedToggle: true,
+                selectorBack: false,
+                closedSymbol: '&#8862; &#x1f5c0;',
+                openedSymbol: '&#8863; &#x1f5c1;',
+                collapseAll: 'Collapse all',
+                expandAll: 'Expand all',
+                collapsed: false,
+        });
+
+        lay.addTo(map).collapseTree().expandSelected().collapseTree(true);
+        L.DomEvent.on(L.DomUtil.get('onlysel'), 'click', function() {
+            lay.collapseTree(true).expandSelected(true);
+        });
+		*/
+		var controlLayers = L.control.layers().addTo(mymap);
+		
+		
 		var options = {
                 position: 'topright',
                 title: 'Search',
-                placeholder: 'name,description,has_mask,month,year,gender,number_of_people,state_district',
+                placeholder: 'state_district',//'name,description,has_mask,month,year,gender,number_of_people,state_district',
                 maxResultLength: 15,
                 threshold: 0.5,
                 showInvisibleFeatures: true,
                 showResultFct: function(feature, container) {
                     props = feature.properties;
                     var name = L.DomUtil.create('b', null, container);
-                    name.innerHTML = props.layer;
+                    name.innerHTML = props.name;
                     
                     container.appendChild(L.DomUtil.create('br', null, container));
                     
-                    var cat = props.layer ? props.country : props.has_mask,
+                    var cat = props.name ? props.country : props.has_mask,
                         info = '' + cat + ', ' + props.state_district;
                     container.appendChild(document.createTextNode(info));
                 }
         };
         
-        async function waitForDB(){	
+        async function waitForDB(){
             //need to wait for X seconds to get the database downloaded
             await sleep(4000);
             console.log("wait complete for DB");
@@ -196,13 +264,16 @@
             loadData("http://localhost:8000/Example/websitetest.kml")
         }
         
+        var current_layer = null;
+        var geojson_layer = null;
+        
         async function loadData(url){     
-            var current_layer = omnivore.kml(url, null, customLayer)
+            current_layer = omnivore.kml(url, null, customLayer)
             .on('ready', function() {
                 console.log(url," data loaded");
                 
                 var counter = 1;
-                var once = false;
+                var once = true;
                     
                 current_layer.eachLayer(function(layer) {
                     layer.feature.properties.id = counter++;
@@ -247,6 +318,7 @@
                         layer.feature.properties.number_of_people = number_of_people;
                         layer.feature.properties.has_mask = has_mask;
                         layer.feature.properties.description = rest_of_description;
+                        layer.feature.properties.username = username;
                     }
                     catch(err) {
                         //console.log(err.message);
@@ -257,12 +329,12 @@
                     }
                 });
                 
-                console.log(current_layer);
+                geojson_layer = current_layer.toGeoJSON();
                 
-                mymap.addLayer(current_layer);
-                searchCtrl = L.control.fuseSearch(options);
-                mymap.addControl(searchCtrl);
-                searchCtrl.indexFeatures(current_layer.features, categories);
+                createOverlays(geojson_layer);
+                createSearch(geojson_layer,options,search_categories);
+                
+                console.log("Finished loading layer");
             })
             .on('error', function() {
                 // fired if the layer can't be loaded over AJAX
@@ -271,7 +343,150 @@
             });
         };
         
-        waitForDB();
+        async function createSearch(layer,options,search_categories){
+            //mymap.addLayer(current_layer);
+            searchCtrl = L.control.fuseSearch(options);
+            mymap.addControl(searchCtrl);
+            searchCtrl.indexFeatures(geojson_layer, search_categories);
+        };
+        
+        var info = L.control();
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+            this.update();
+            return this._div;
+        };
+        
+        var prevLayerClicked = null;
+        
+        function highlightFeature(e) {
+            var layer = e.target;
+
+            layer.setStyle({
+                weight: 5,
+                color: '#666',
+                dashArray: '',
+                fillOpacity: 0.7
+            });
+
+            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                layer.bringToFront();
+            }
+            
+            info.update(layer.feature);
+        }
+        
+        function resetHighlight(e) {
+            var layer = e.target;
+            layer.setStyle(style(layer.feature));
+            info.update();
+        }
+        
+        info.update = function (props) {
+            if(props==null){this._div.innerHTML = ""; return;}
+            this._div.innerHTML = "";
+            this._div.innerHTML += props.properties.name + "<br>";
+            this._div.innerHTML += props.properties.username + "<br>";
+            this._div.innerHTML += props.geometry.coordinates[0] + "<br>";
+            this._div.innerHTML += props.properties.state_district + "<br>";
+            this._div.innerHTML += props.properties.country + "<br>";
+            this._div.innerHTML += "Number of people:"+props.properties.number_of_people + "<br>";
+            this._div.innerHTML += "Has mask:"+props.properties.has_mask + "<br>";
+            this._div.innerHTML += "Full description:"+props.properties.description + "<br>";
+        };
+        
+        info.addTo(mymap);
+        
+        function mybindPopup(feature, layer){
+            layer.on({
+                mouseover: highlightFeature,
+                mouseout: resetHighlight,
+                click: function(e){
+                    if (prevLayerClicked !== null) {
+                      // Reset style
+                        prevLayerClicked.setStyle({
+                            weight: 2,
+                            opacity: 1,
+                            color: 'red',
+                            dashArray: '',
+                            fillOpacity: 1.9,
+                            fillColor: 'red'
+                        });
+                    }
+                    mymap.fitBounds(e.target.getBounds());
+                    var layer = e.target;
+                    layer.setStyle({
+                        weight: 5,
+                        color: 'blue',
+                        dashArray: '',
+                        fillOpacity: 0.9,
+                        fillColor: 'blue'
+                    });
+                    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                        layer.bringToFront();
+                    }
+                    //info.update(layer.feature.properties.availability);
+                    prevLayerClicked = layer;
+                }
+            });
+        };
+        
+        async function createOverlays(geojson_layer){
+                // Iterate the collection
+                geojson_layer.features.forEach(function (feature) {
+
+                  var category = feature.properties.state_district;
+                  var username = feature.properties.username;
+
+                  // Check if there's already an overlay for this category
+                  if (!overlays[category]) {
+
+                    // Create and store new layer in overlays object
+                    overlays[category] = new L.GeoJSON(null, {
+                      'onEachFeature': mybindPopup,
+                      'style': style,
+                      'filter':function (geoJsonFeature) {
+                            return true;
+                       }
+                    });
+
+                    // Add layer/title to control
+                    controlLayers.addOverlay(overlays[category], category); 
+                  }
+
+                  // Add feature to corresponding layer
+                  overlays[category].addData(feature);
+                });
+                
+                mymap.on('layeradd layerremove', function () {
+                    // Create new empty bounds
+                    var bounds = new L.LatLngBounds();
+                    // Iterate the map's layers
+                    mymap.eachLayer(function (layer) {
+                        // Check if layer is a featuregroup
+                        if (layer instanceof L.FeatureGroup) {
+                            // Extend bounds with group's bounds
+                            bounds.extend(layer.getBounds());
+                        }
+                    });
+                    // Check if bounds are valid (could be empty)
+                    if (bounds.isValid()) {
+                        // Valid, fit bounds
+                        mymap.fitBounds(bounds);
+                    } else {
+                        // Invalid, fit world
+                        mymap.fitWorld();
+                    }
+                });
+        };
+        
+        (async () => {
+            try {
+                waitForDB();
+            } catch (e) {
+                // Deal with the fact the chain failed
+            }
+        })(); 
     </script>
 </body>
 
