@@ -30,6 +30,9 @@
    
     <!-- Search box and functionality libraries -->
     <script src='./libs/fuse.min.js'></script>
+    <script src="./libs/leaflet-search.min.js"></script>
+    <link rel="stylesheet" href="./css/leaflet-search.min.css" />
+    
     <script src='./libs/leaflet.fusesearch.js'></script>    
     <link rel="stylesheet" href="./css/leaflet.fusesearch.css"/>
     
@@ -70,10 +73,10 @@
 
         xhr.onload = function(e) {
             db_content = new Uint8Array(this.response);
+            
             console.log("database downloaded");
         };
         xhr.send();
-        
         
         initSqlJs(config).then(function(SQL){
           //Create the database
@@ -104,10 +107,120 @@
     -->
     
     <script>
+        var info = null;
+        var layer = null;
+        var geojson_layer = null;
+        
+        var mymap = L.map('mapid').setView([40.7385 ,  -73.9711], 13);
+        
+        var osm = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 22,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiZXZhbm9rIiwiYSI6ImNra3FzNHJmdjM4d28yb3F0YnRiN3owaG0ifQ.1STNlFlEdByWEJkvPI2qrQ'
+        });
+        osm.addTo(mymap);
+        
+        var searchCtrl = null;
+        var search_categories = [
+                'properties.name',
+			    'properties.description',
+			    'properties.has_mask',
+			    'properties.month',
+			    'properties.year',
+			    'properties.day',
+			    'properties.state_district',
+			    'properties.gender',
+			    'properties.number_of_people',
+			    'properties.country',
+			    'properties.username',
+		];
+		
+		// Object to store category layers
+        var overlays = {};
+        var categories = new Set();
+        var ctl = null;
+		//var controlLayers = L.control.layers().addTo(mymap);
+		
+		var options = {
+                position: 'topleft',
+                title: 'Search',
+                placeholder: 'name,description,has_mask,month,year,gender,number_of_people,state_district',
+                maxResultLength: 15,
+                threshold: 0.5,
+                showInvisibleFeatures: true,
+                showResultFct: function(feature, container) {
+                    props = feature.properties;
+                    var name = L.DomUtil.create('b', null, container);
+                    name.innerHTML = props.name;
+                    
+                    container.appendChild(L.DomUtil.create('br', null, container));
+                    
+                    var cat = props.name ? props.country : props.has_mask;
+                    var information = '' + cat + ', ' + props.state_district;
+                    container.appendChild(document.createTextNode(information));
+                }
+        };
+        
+        createInfoBox();
+        
+        function createInfoBox(){
+            info = L.control({position:'bottomleft'});
+            info.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info left'); // create a div with a class "info"
+                this.update();
+                return this._div;
+            };
+            info.update = function (props) {
+                if(props==null){this._div.innerHTML = ""; return;}
+                this._div.innerHTML = "";
+                this._div.innerHTML += props.properties.name + "<br>";
+                this._div.innerHTML += props.properties.username + "<br>";
+                this._div.innerHTML += props.geometry.coordinates[0] + "<br>";
+                this._div.innerHTML += props.properties.state_district + "<br>";
+                this._div.innerHTML += props.properties.country + "<br>";
+                this._div.innerHTML += "Number of people:"+props.properties.number_of_people + "<br>";
+                this._div.innerHTML += "Has mask:"+props.properties.has_mask + "<br>";
+                this._div.innerHTML += "Full description:"+props.properties.description + "<br>";
+            };
+            info.addTo(mymap);
+        };
+        
+        function getColor(d) {return '#800026';}
+        
+        function style(feature) {
+            return {
+                fillColor: getColor(feature.properties.has_mask),
+                weight: 5,
+                opacity: 1,
+                color: 'red',
+                fillOpacity: 0.7
+            };
+        }
+        
+        var customLayer = L.geoJson(null, {
+            onEachFeature: function(feature, layer) {
+                feature.layer = layer;
+            }
+        });
+        
+        function sleep(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        
+        async function main(){
+            //need to wait for X seconds to get the database downloaded
+            await sleep(4000);
+            console.log("wait complete for DB");
+            
+            loadData("http://localhost:8000/Example/websitetest.kml")
+        }
+        
         function simpleReverseGeocoding(longitude, latitude) {
-            try{
-                var scale = Math.pow(Math.cos(latitude * Math.PI / 180), 2);
-                var query = `
+            var scale = Math.pow(Math.cos(latitude * Math.PI / 180), 2);
+            var query = `
                     SELECT * FROM everything WHERE id IN ( 
                         SELECT feature_id 
                         FROM coordinates 
@@ -119,189 +232,32 @@
                         LIMIT 1
                     );`;
 
-                // Prepare a statement
-                let stmt = db.exec(query);
+            // Prepare a statement
+            let stmt = db.exec(query);
           
-                var response= {};
-          
-                //console.log(stmt[0]);
-                //console.log(stmt[0].columns);
-                //console.log(stmt[0].values[0],stmt[0].values[0].length);
-          
-                for(var i=0; i< stmt[0].values[0].length; i++){
-                    //console.log(stmt[0].columns[i], stmt[0].values[0][i]);
-                    response[stmt[0].columns[i]] = stmt[0].values[0][i];
-                }
-                //console.log(response);
-                return response;
-            }catch(err){
-                return null;
+            var response= {};
+            for(var i=0; i< stmt[0].values[0].length; i++){
+                response[stmt[0].columns[i]] = stmt[0].values[0][i];
             }
-        }
-    
-        var mymap = L.map('mapid').setView([40.7385 ,  -73.9711], 13);
-        
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 22,
-            id: 'mapbox/streets-v11',
-            tileSize: 512,
-            zoomOffset: -1,
-            accessToken: 'pk.eyJ1IjoiZXZhbm9rIiwiYSI6ImNra3FzNHJmdjM4d28yb3F0YnRiN3owaG0ifQ.1STNlFlEdByWEJkvPI2qrQ'
-        }).addTo(mymap);
-        
-        function getColor(d) {
-            if(d){
-                return '#800026';
-            }else{
-                return '#800026';
-            }
-            /*
-            return d > 1000 ? '#800026' :
-                   d > 500  ? '#BD0026' :
-                   d > 200  ? '#E31A1C' :
-                   d > 100  ? '#FC4E2A' :
-                   d > 50   ? '#FD8D3C' :
-                   d > 20   ? '#FEB24C' :
-                   d > 10   ? '#FED976' :
-                              '#FFEDA0';
-            */
+            return response;
         }
         
-        function style(feature) {
-            return {
-                fillColor: getColor(feature.properties.has_mask),
-                weight: 5,
-                opacity: 1,
-                color: 'red',
-                //dashArray: '3',
-                fillOpacity: 0.7
-            };
-        }
-        
-        var customLayer = L.geoJson(null, {
-            onEachFeature: function(feature, layer) {
-                feature.layer = layer;
-                layer.bindPopup(feature.properties.name);
-            }
-        });
-        
-        function sleep(ms) {
-          return new Promise(resolve => setTimeout(resolve, ms));
-        }
-        
-        var searchCtrl = null;
-        var search_categories = [
-        /*
-                'properties.name',
-			    'properties.description',
-			    'properties.has_mask',
-			    'properties.month',
-			    'properties.year',
-			    'properties.day',
-		*/
-			    'properties.state_district',
-		/*  
-			    'properties.gender',
-			    'properties.number_of_people',
-			    'properties.country',
-		*/
-		];
-		
-		// Object to store category layers
-        var overlays = {};
-		/*
-		var baseTree = {
-            label: 'Base Layers',
-            children: [
-                {label:'region',children:[]}
-            ],
-        };
-		var controlLayers = L.control.layers.tree(baseTree, overlaysTree,
-        {
-                namedToggle: true,
-                selectorBack: false,
-                closedSymbol: '&#8862; &#x1f5c0;',
-                openedSymbol: '&#8863; &#x1f5c1;',
-                collapseAll: 'Collapse all',
-                expandAll: 'Expand all',
-                collapsed: false,
-        });
-
-        lay.addTo(map).collapseTree().expandSelected().collapseTree(true);
-        L.DomEvent.on(L.DomUtil.get('onlysel'), 'click', function() {
-            lay.collapseTree(true).expandSelected(true);
-        });
-		*/
-		var controlLayers = L.control.layers().addTo(mymap);
-		
-		
-		var options = {
-                position: 'topright',
-                title: 'Search',
-                placeholder: 'state_district',//'name,description,has_mask,month,year,gender,number_of_people,state_district',
-                maxResultLength: 15,
-                threshold: 0.5,
-                showInvisibleFeatures: true,
-                showResultFct: function(feature, container) {
-                    props = feature.properties;
-                    var name = L.DomUtil.create('b', null, container);
-                    name.innerHTML = props.name;
+        function processLayer(current_layer){
+            var counter = 1;
+            var once = false;
                     
-                    container.appendChild(L.DomUtil.create('br', null, container));
-                    
-                    var cat = props.name ? props.country : props.has_mask,
-                        info = '' + cat + ', ' + props.state_district;
-                    container.appendChild(document.createTextNode(info));
-                }
-        };
-        
-        async function waitForDB(){
-            //need to wait for X seconds to get the database downloaded
-            await sleep(4000);
-            console.log("wait complete for DB");
-            
-            loadData("http://localhost:8000/Example/websitetest.kml")
-        }
-        
-        var current_layer = null;
-        var geojson_layer = null;
-        
-        async function loadData(url){     
-            current_layer = omnivore.kml(url, null, customLayer)
-            .on('ready', function() {
-                console.log(url," data loaded");
-                
-                var counter = 1;
-                var once = true;
-                    
-                current_layer.eachLayer(function(layer) {
+            current_layer.eachLayer(function(layer) {
                     layer.feature.properties.id = counter++;
                     
-                    try{
-                        layer.feature.coordinates
-                    }catch(err){
-                        //console.log(err.message);
-                    }
-                    
-                    try{
-                        var lng = layer.feature.geometry.coordinates[0][0];
-                        var lat = layer.feature.geometry.coordinates[0][1]
-                        
-                        var response = simpleReverseGeocoding(lng,lat);
-                            
-                        layer.feature.properties.country = response.country_name;
-                        layer.feature.properties.state_district = response.admin1_name;
-                        layer.feature.properties.country_code = response.country_id;
-                        
-                    }catch(err){
-                        //console.log(err.message);
-                    }
-                                        
                     var date_year = layer.feature.properties.name.substring(0, 4);
                     var date_month = layer.feature.properties.name.substring(4, 6);
                     var date_day = layer.feature.properties.name.substring(6, 8);
                     var username = layer.feature.properties.name.substring(8, layer.feature.properties.name.length);
+                    
+                    layer.feature.properties.year = date_year;
+                    layer.feature.properties.month = date_month;
+                    layer.feature.properties.day = date_day;
+                    layer.feature.properties.username = username;
                     
                     try{
                         var res = layer.feature.properties.descriptio.split(",");
@@ -311,50 +267,104 @@
                         var rest_of_description = String(remainder.join());
                         var has_mask = rest_of_description.toLowerCase().includes("mask");
                         
-                        layer.feature.properties.year = date_year;
-                        layer.feature.properties.month = date_month;
-                        layer.feature.properties.day = date_day;
                         layer.feature.properties.gender = gender;
                         layer.feature.properties.number_of_people = number_of_people;
                         layer.feature.properties.has_mask = has_mask;
                         layer.feature.properties.description = rest_of_description;
-                        layer.feature.properties.username = username;
-                    }
-                    catch(err) {
-                        //console.log(err.message);
-                    }
+                    }catch(err){}
+                    
+                        
+                    try{
+                        layer.feature.coordinates
+                        var lng = layer.feature.geometry.coordinates[0][0];
+                        var lat = layer.feature.geometry.coordinates[0][1]
+                        
+                        var response = simpleReverseGeocoding(lng,lat);
+                            
+                        layer.feature.properties.country = response.country_name;
+                        layer.feature.properties.state_district = response.admin1_name;
+                        layer.feature.properties.country_code = response.country_id;
+                    }catch(err){}
+                    
                     if(once){
                         console.log(layer.feature);
                         once = false;
                     }
-                });
-                
+            });
+            return current_layer;
+        }
+        
+        function loadData(url){     
+            var current_layer = omnivore.kml(url, null, customLayer)
+            .on('ready', function() {
+                console.log(url," data loaded");
+                current_layer = processLayer(current_layer);
                 geojson_layer = current_layer.toGeoJSON();
                 
                 createOverlays(geojson_layer);
                 createSearch(geojson_layer,options,search_categories);
-                
-                console.log("Finished loading layer");
             })
             .on('error', function() {
-                // fired if the layer can't be loaded over AJAX
-                // or can't be parsed
+                // fired if the layer can't be loaded over AJAX or can't be parsed
                 console.log("Error loading ", url ," data");
             });
         };
         
         async function createSearch(layer,options,search_categories){
-            //mymap.addLayer(current_layer);
+            var poiLayers = L.layerGroup([]);
+            
+            for (var key in overlays){
+              //console.log( key, overlays[key] );
+              poiLayers.addLayer(overlays[key]);
+            }
+            
+            poiLayers.addTo(mymap);
+        
+            var fuseOptions = {
+              shouldSort: true,
+              tokenize: true,
+              threshold: 0.5,
+              location: 0,
+              maxPatternLength: 32,
+              minMatchCharLength: 2,
+              keys: search_categories
+            };
+        
+            var fuse = new Fuse(layer.features, fuseOptions);
+        
+            searchCtrl = L.control.search({
+                   initial: false,
+                   layer: poiLayers,
+                   collapsed: false,
+                   casesensitive: false,
+                   propertyName: 'name',
+                   container: 'findbox',
+                   filterData: function(text, records) {
+                    var jsons = fuse.search(text),
+                        ret = {}, key;
+                    
+                    for(var i in jsons) {
+                        key = jsons[i].properties.name;
+                        ret[ key ]= records[key];
+                    }
+
+                    console.log(jsons,ret);
+                    return ret;
+                }
+            })
+            .on('search:locationfound', function(e) {
+                e.layer.openPopup();
+            });
+            
+            mymap.addControl(searchCtrl);
+        
+            /*
             searchCtrl = L.control.fuseSearch(options);
             mymap.addControl(searchCtrl);
-            searchCtrl.indexFeatures(geojson_layer, search_categories);
-        };
-        
-        var info = L.control();
-        info.onAdd = function (map) {
-            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-            this.update();
-            return this._div;
+            console.log(layer.features);
+            console.log(search_categories);
+            searchCtrl.indexFeatures(layer.features, search_categories);
+            */
         };
         
         var prevLayerClicked = null;
@@ -381,21 +391,6 @@
             layer.setStyle(style(layer.feature));
             info.update();
         }
-        
-        info.update = function (props) {
-            if(props==null){this._div.innerHTML = ""; return;}
-            this._div.innerHTML = "";
-            this._div.innerHTML += props.properties.name + "<br>";
-            this._div.innerHTML += props.properties.username + "<br>";
-            this._div.innerHTML += props.geometry.coordinates[0] + "<br>";
-            this._div.innerHTML += props.properties.state_district + "<br>";
-            this._div.innerHTML += props.properties.country + "<br>";
-            this._div.innerHTML += "Number of people:"+props.properties.number_of_people + "<br>";
-            this._div.innerHTML += "Has mask:"+props.properties.has_mask + "<br>";
-            this._div.innerHTML += "Full description:"+props.properties.description + "<br>";
-        };
-        
-        info.addTo(mymap);
         
         function mybindPopup(feature, layer){
             layer.on({
@@ -431,12 +426,14 @@
             });
         };
         
-        async function createOverlays(geojson_layer){
+        function createOverlays(geojson_layer){
                 // Iterate the collection
                 geojson_layer.features.forEach(function (feature) {
 
                   var category = feature.properties.state_district;
                   var username = feature.properties.username;
+
+                  categories.add(category);
 
                   // Check if there's already an overlay for this category
                   if (!overlays[category]) {
@@ -451,13 +448,56 @@
                     });
 
                     // Add layer/title to control
-                    controlLayers.addOverlay(overlays[category], category); 
+                    //controlLayers.addOverlay(overlays[category], category); 
                   }
 
                   // Add feature to corresponding layer
                   overlays[category].addData(feature);
                 });
                 
+                var locations = {
+                    label: 'Locations',
+                    selectAllCheckbox: true,
+                    children: [
+                    ]
+                };
+                
+                var baseTree = {
+                    label: 'Base Layers',
+                    children: [
+                        {
+                            label: 'World &#x1f5fa;',
+                            children: [
+                                { label: 'OpenStreetMap', layer: osm },
+                                /* ... */
+                            ]
+                        }
+                    ]
+                };
+                
+                for (var it = categories.values(), val= null; val=it.next().value; ) {
+                    var a = [];
+                    overlays[val].eachLayer(function (layer) {
+                        a.push({'label':layer.feature.properties.username, layer: layer});
+                    });
+                    locations.children.push({
+                        'label':val,
+                        collapsed:true,
+                        selectAllCheckbox: true,
+                        children: a
+                    });
+                }
+                
+                ctl = L.control.layers.tree(baseTree, locations,
+                {
+                    namedToggle: true,
+                    collapseAll: 'Collapse all',
+                    expandAll: 'Expand all',
+                    collapsed: false,
+                });
+                
+                mymap.addControl(ctl);
+                /*
                 mymap.on('layeradd layerremove', function () {
                     // Create new empty bounds
                     var bounds = new L.LatLngBounds();
@@ -478,11 +518,12 @@
                         mymap.fitWorld();
                     }
                 });
+                */
         };
         
         (async () => {
             try {
-                waitForDB();
+                main();
             } catch (e) {
                 // Deal with the fact the chain failed
             }
