@@ -222,46 +222,40 @@
         
         async function getFiles(){
             var url = "https://api.github.com/search/code?q=extension:kml+repo:eokeeffe/NYU-COVID-Data-Viewer";
-            var start_url = "https://www.evoflighttech.com/NYU-COVID-Data-Viewer/";
+            var start_url = "http://www.evoflighttech.com/NYU-COVID-Data-Viewer/";
             var sorted_filenames = {};
             var orderedDates = {};
             var filenames = [];
             
-            $.getJSON( url, function(result){
+            $.getJSON( url ).done(function( data ) {
                 
-                console.log( "JSON Data: " + result );
-                var results = null;
-                $.each(result, function(i, field){
-                    //$("div").append(field + " ");
-                    //console.log(field);
-                    results = field;
-                });
-                
-                results.forEach(function(element){
+                data.items.forEach(function(element){
                     //console.log(element);
                     var date = element.name.split(".")[0].replace(/_/g,"/");
                     var path = element.path;
-                    console.log(date,path);
-                });//sorted_filenames[] = element.path);
+                    //console.log(date,path);
+                    sorted_filenames[date] = {relative:path,full:path+start_url };
+                });
                 
                 Object.keys(sorted_filenames).sort(function(a, b) {
                   return a.split('/').reverse().join('').localeCompare(b.split('/').reverse().join(''));
                 }).forEach(function(key) {
                   orderedDates[key] = sorted_filenames[key];
-                })
+                });
+                console.log(orderedDates);
                 return orderedDates;
-            });
-        }
+           });
+        };
         
         async function main(){
             //need to wait for X seconds to get the database downloaded
             await sleep(4000);
             console.log("wait complete for DB");
             
-            var date_files = await getFiles();
-            console.log(await date_files);
+            //var date_files = await getFiles();
+            //console.log("result= ", await date_files);
             
-            //loadData("./Data/12_01_2021.kml");
+            loadData("./Data/12_01_2021.kml");
         }
         
         function simpleReverseGeocoding(longitude, latitude) {
