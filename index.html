@@ -215,7 +215,7 @@
             await sleep(4000);
             console.log("wait complete for DB");
             
-            loadData("http://localhost:8000/Example/websitetest.kml")
+            loadData("./Example/12_01_2021.kml");//http://localhost:9000
         }
         
         function simpleReverseGeocoding(longitude, latitude) {
@@ -302,7 +302,7 @@
                 geojson_layer = current_layer.toGeoJSON();
                 
                 createOverlays(geojson_layer);
-                createSearch(geojson_layer,options,search_categories);
+                //createSearch(geojson_layer,options,search_categories);
             })
             .on('error', function() {
                 // fired if the layer can't be loaded over AJAX or can't be parsed

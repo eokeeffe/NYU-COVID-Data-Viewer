@@ -45,10 +45,11 @@ class CORSHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    import os
+    import os,sys
     import SocketServer
 
-    PORT = 8000
+    PORT = int(sys.argv[1])
+    print( PORT )
 
     Handler = CORSHTTPRequestHandler
     #Handler = SimpleHTTPServer.SimpleHTTPRequestHandler

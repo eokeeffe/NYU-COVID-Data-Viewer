@@ -1,0 +1,2894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>20210120ME01</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME01</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, no mask, 14:44, exits holding mask and large box puts box in trunk of car and goes in other ER entrance not wearing mask, 14:50</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4024746567011,36.3367214058144,0 -82.4022835493088,36.3367349098755,0 -82.4022979661822,36.3373652768408,0 -82.4021004885435,36.3370441522333,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME02</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME02</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, no mask, 14:54, exits ER holding mask and phone gets in car and texts on phone before driving away, 14:59</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.402453199029,36.3367122230515,0 -82.4023308232427,36.3366854850006,0 -82.4021450802684,36.3372893846013,0 -82.4018329381943,36.3375070681931,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME03</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME03</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, M, 1, masks, 15:03, come out holding hands and walk to car take off masks and leave, 15:06</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.401972413063,36.3370546853575,0 -82.4022198468447,36.33706413816,0 -82.4023552983999,36.3368688700345,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME04</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME04</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, scrubs and mask, 15:17, walked out holding bag sat down on bench to type on phone then walked to car, 15:23</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4020505324006,36.3370684594408,0 -82.4021323397755,36.3370927666407,0 -82.4022641032934,36.3373752697636,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME05</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME05</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask, 15:40, carrying an IV pole puts it in her car talks to a security guard and leaves, 15:46</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4020190164447,36.3370384805504,0 -82.4021276459098,36.3373695981048,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME06</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME06</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 15:49, comes out talks on phone then gets in car waiting for him, 16:00</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4020076170564,36.3370452325538,0 -82.4016404896975,36.3373949855265,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME07</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME07</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 2, mask, 16:11, mask around neck walks to security car and then stands in front of ER entrance, 16:20</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4020089581609,36.3370328088672,0 -82.4019606783986,36.3372164631629,0 -82.4019553139806,36.3370287576646,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME08</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME08</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 16:23, carrying keys and a pair of shoes gets in car, 16:27</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4024200066924,36.3367224861394,0 -82.4023727327585,36.3375851208465,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME09</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME09</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 16:42, carrying phone and bag takes off mask outside car then gets in car and leaves, 16:47</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4019918590784,36.337056575918,0 -82.4015429243445,36.3371824331349,0 -82.4011281877756,36.3377190795433,0 -82.4008646607399,36.3375932231936,0 -82.401182167232,36.3370895256812,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME10</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME10</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask, 17:12, adjusts her mask walks to car and drives away, 17:17</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4024672806263,36.3367000693932,0 -82.4025024846196,36.3371176139928,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME11</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME11</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 17:29, stood in front of ER for a couple minutes then walked to car carrying keys, 17:32</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4020056053996,36.3370476632748,0 -82.4023197591305,36.3370519845565,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME12</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME12</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask, 17:41, sat at bus stop with earphones in using phone, 18:01</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4019858241081,36.3370292978249,0 -82.4018755182624,36.3372810121434,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME13</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME13</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 3, masks and scrubs, 18:04, carrying keys and bag waved goodbye to each other got in separate cars took off mask used hand sanitizer, 18:07</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.40199085325,36.3370546853575,0 -82.401670999825,36.3373077499899,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210120ME14</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210120ME14</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask, 18:22, took off mask while outside carried dog and walked it around in grass then stopped by car then went back in ER, 18,31</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210120ME Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210120ME.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-82.4024642631412,36.3367208656519,0 -82.4027539417147,36.3367981088502,0 -82.4028739705682,36.33728614365,0 -82.4025557935238,36.3368794031824,0 -82.4024592339993,36.3367319389823,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ01</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ01</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1, mask, 12:46, walks to car touches door handle, 12:49</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.786656036973,40.7399928156902,0 -73.7863261252642,40.7398419207043,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ02</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ02</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask, 13:02, walks to bus stop hold a phone then gets on the bus, 13:11</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7867137044668,40.7400062793676,0 -73.7865453958511,40.7402255082973,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ03</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ03</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 2, mask, 13:25, holds a phone and  waits, then gets into car touches door handle, 13:32</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7867200747132,40.7400017067982,0 -73.7864371016622,40.739962585914,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ04</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ04</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask,13:39, walks to Starbucks touches door handle, 13:44</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7866778299212,40.739982146359,0 -73.7855536490679,40.7393320760226,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ05</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ05</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask, 13:52, walks to parking lot gets into a car, touches door handle, 13:58</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7866409495473,40.7399475980367,0 -73.7867110222578,40.7400532752013,0 -73.787248134613,40.7399084771207,0 -73.7871465459466,40.7395248876995,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ06</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ06</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask, 14:13, walks into the car touches door handle, 14:16</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7867157161236,40.7399483601323,0 -73.7863552942872,40.739880025531,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ07</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ07</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1, mask, 14:26, walks on the street holds a phone, enters an apartment, 14:39</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7866204977036,40.7399877350565,0 -73.7863683700562,40.7399623318822,0 -73.7861420586705,40.7394705245165,0 -73.7861990556121,40.7391321508083,0 -73.7857618555427,40.7386725999755,0 -73.785731010139,40.7383400650824,0 -73.7846403568983,40.7380255653118,0 -73.7831949815154,40.7384706404793,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ08</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ08</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask, 14:45, walks into CVS, touches door handle, 14:49</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7866972759366,40.7399554730235,0 -73.7865393608809,40.7397222714064,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ09</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ09</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask, 15:06, walks into car touches door handle, 15:08</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7867257744074,40.7399976422918,0 -73.7863324955106,40.7398121989242,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ10</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ10</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask, 15:14, walks to car touches door knob, 15:17</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7867006286979,40.7399905294051,0 -73.7864310666919,40.7400484486037,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ11</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ11</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask, 15:33, walks to bus stop touches phone, 15:36</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7867613136768,40.7399966261652,0 -73.7865262851119,40.740242274327,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ12</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ12</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,2, masks, 15:56, walks into Five Guys touch door handle, 15:58</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7867076694965,40.7399387069215,0 -73.7866486608982,40.739841666672,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210123VJ13</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210123VJ13</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask, 16:14, walks to Starbucks touches door handle holds a phone, 16:19</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210123VJ Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210123VJ.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.7867318093777,40.7399920535952,0 -73.7855244800448,40.73933131392,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML01</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML01</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask10:40, Walked to bite deli, picked up food, walked back to hospital. touched bags and door. 10:49.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0575779229402,40.8844327302819,0 -74.0578930824995,40.8840307109583,0 -74.0580137819052,40.8840649308571,0 -74.0581881254912,40.8837878759089,0 -74.0585431829095,40.8839863518039,0 -74.0585438534617,40.8839161375387,0 -74.0581700205803,40.8837186753612,0 -74.0579628199339,40.8841158804514,0 -74.0577924996614,40.8840930672051,0 -74.0575494244695,40.8844410950969,0 -74.0568725019693,40.8841769692168,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML02</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML02</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask (not worn properly, not covering nose), 10:54, walked into medical building next to Starbucks. 10:58.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0570173412561,40.8841990219938,0 -74.0576711297035,40.8844230980694,0 -74.0578880533576,40.8840879975937,0 -74.0580302104354,40.8840867301908,0 -74.0581133589149,40.8838428814209,0 -74.058327935636,40.8838223494149,0 -74.0588301792741,40.8841272870717,0 -74.0587416663766,40.8842028241959,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML03</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML03</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask sunglasses, 11:00, walked into Starbucks parking lot, got in car and drove away. 11:02</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0575061738491,40.8843468007578,0 -74.0577009692788,40.8843926805471,0 -74.0580365806818,40.8837057477783,0 -74.0581706911325,40.8837675973676,0 -74.0583993494511,40.8838809036375,0 -74.0586518123746,40.8839450343934,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML04</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML04</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,2,mask,11:04, mom pushing child in stroller (touch), entered random building (apt?) 11:09.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0575189143419,40.8843488285945,0 -74.0576966106892,40.8844124519382,0 -74.0578924119472,40.8840362875356,0 -74.0579722076654,40.8840525103033,0 -74.0593066066504,40.8848164967652,0 -74.0593793615699,40.884851983646,0 -74.0597578883171,40.8842403392457,0 -74.0606892853975,40.8847675755341,0 -74.0606748685241,40.88485046278,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML05</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML05</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask,scrubs, 11:13, running, ran into medical building next to Starbucks, used sweatshirt to open door. 11:15.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0569740906358,40.8841888827869,0 -74.0576640889049,40.884467203452,0 -74.0579628199339,40.8839805217414,0 -74.0580771490932,40.8839295720429,0 -74.0581341460347,40.8838038452558,0 -74.0583175420761,40.8838134775585,0 -74.0588757768273,40.8841356519252,0 -74.0588285028934,40.8842727846771,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML06</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML06</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask, 11:15, walked into Starbucks and right back out carrying to go bag, back to hospital. 11:18</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0571021661162,40.8842241165241,0 -74.0577006340027,40.8844192958799,0 -74.0579041466117,40.8840190508406,0 -74.0580134466291,40.8840253878614,0 -74.0581234171987,40.8838167728195,0 -74.0583282709122,40.8838309677886,0 -74.0586578473449,40.8840342596894,0 -74.0586437657475,40.8839731707923,0 -74.0583440288901,40.883783059756,0 -74.0581160411239,40.8837815388655,0 -74.058002717793,40.8839627780698,0 -74.057862572372,40.8839812821844,0 -74.0576728060842,40.8843508564311,0 -74.0568044409156,40.884115626971,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML07</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML07</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1, NO mask, gloves, 11:20, walked up street carrying packages, went into small apt building on corner. 11:24.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0574263781309,40.8843893853147,0 -74.0576184913516,40.8844727799925,0 -74.0580972656608,40.8836028339892,0 -74.0578934177756,40.8835612628566,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML08</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML08</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask, sunglasses,11:38, went into Starbucks, touched door, walked out w coffees in hands, back to hospital. 11:46.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0570659562945,40.8842380579257,0 -74.0576593950391,40.8844190424006,0 -74.0578622370958,40.8840403432279,0 -74.0580218285322,40.8839904074993,0 -74.0580972656608,40.8838299538623,0 -74.0583510696888,40.8838129705952,0 -74.0587041154504,40.8840089116062,0 -74.0586467832327,40.884081660579,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML09</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML09</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M/F,2,masks (M not wearing mask), 11:50, put mask on before entering building, F touched door. 11:54.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0573908388615,40.8842763333952,0 -74.0576258674264,40.8844066219132,0 -74.0577690303326,40.8841047273098,0 -74.057952426374,40.8841708856908,0 -74.0581304579973,40.8838043522192,0 -74.0582880377769,40.8838015639208,0 -74.0588901937008,40.8841698717698,0 -74.0589106455445,40.8842854586694,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML10</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML10</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask,scrubs, 12:00 walked into bite, ordered and sat down to eat/work (laptop). 12:10.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0574146434665,40.8843146088425,0 -74.0577076748013,40.8844073823513,0 -74.0579188987613,40.8839939562325,0 -74.0580003708601,40.8840373014587,0 -74.0581250935793,40.8838025778475,0 -74.0583172068,40.8838015639208,0 -74.0585673227906,40.8839703825011,0 -74.0585549175739,40.8840383153818,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML11</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML11</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask/glasses, 12:12, walked into bite deli and sat down. 12:20.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0570401400328,40.884075070083,0 -74.0576734766364,40.8843896387941,0 -74.0578572079539,40.8840367944972,0 -74.0580349043012,40.8840261483038,0 -74.0581354871392,40.8838091683706,0 -74.0583071485162,40.8838035917742,0 -74.0586558356881,40.8840175299555,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML12</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML12</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,4, masks, 12:24, walked into Starbucks got coffees, walked back to hospital. 1 touched door on way in/out. 12:40.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0570475161076,40.8842099216394,0 -74.0576821938157,40.8844063684339,0 -74.0578967705369,40.8840479476503,0 -74.0579742193222,40.8840664517411,0 -74.0581106767058,40.8838226028965,0 -74.0583229064941,40.8838188006725,0 -74.0586756169796,40.8840517498611,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML13</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML13</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,2,masks, 12:45, walked into bite deli, picked up food to go. walked back to hospital, touched doors and bags. 12:58.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0574428066611,40.8843432520435,0 -74.057675153017,40.884402312764,0 -74.0578813478351,40.8840411036702,0 -74.0579986944795,40.884013220781,0 -74.0581227466464,40.8837964942871,0 -74.0583426877856,40.8838312212701,0 -74.0585180372,40.8839526388267,0 -74.0584959089756,40.8840248808997,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML14</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML14</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask,13:00, walked into BBQ restaurant, ordered and sat down. touched door &amp; phone. got food and walked back to hospital. 13:18.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0576060861349,40.8843800065753,0 -74.0576788410544,40.8844040871196,0 -74.0582531690598,40.883341746565,0 -74.0582944080234,40.883281163996,0 -74.0584248304367,40.8833397186974,0 -74.0586605295539,40.883343520949,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML15</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML15</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1, mask / dr.s coat, 13:21, went into Starbucks touched door, back to hospital. 13:35.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0576007217169,40.8843805135342,0 -74.0576932579279,40.8844233515487,0 -74.0579866245389,40.8838715248261,0 -74.0580717846751,40.8838740596402,0 -74.0581103414297,40.8838079009624,0 -74.0582950785756,40.8838071405174,0 -74.0586665645242,40.8840274157079,0 -74.0586625412107,40.8840806466566,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML16</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML16</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,no mask, 13:40, walked to bus stop area, walked up and down street pacing waiting for bus. no touches. 13:50.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0576557070017,40.8844081427894,0 -74.0577073395252,40.8844238585073,0 -74.0582421049476,40.8833559416359,0 -74.0578904002905,40.8831546755247,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML17</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML17</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask and gloves, 14:00, walked to Starbucks, picked up coffee, went into medical building next door. 14:11.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0573908388615,40.8843019348557,0 -74.0576795116067,40.884404340599,0 -74.0579162165523,40.8840253878614,0 -74.0580466389656,40.8840337527278,0 -74.0581200644374,40.8838269120835,0 -74.0583061426878,40.8837891433176,0 -74.0586025267839,40.8839746916784,0 -74.0585616230965,40.8840793792535,0 -74.0587051212788,40.8840636634538,0 -74.0587530657649,40.8841848271037,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML18</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML18</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M/F,2, masks, 14:14, F carrying bag, waited at bus stop. 14:22.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0576054155827,40.8843881179175,0 -74.0577006340027,40.8844154936902,0 -74.0582585334778,40.8833729250203,0 -74.0583131834865,40.883274826904,0 -74.0581780672074,40.8831790099989,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML19</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML19</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1, mask, 14:32, picked up food from bite, walked back to main street, got picked up by a car w hazard lights on. 14:46.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0573827922344,40.8843201853958,0 -74.0576553717256,40.8844015523259,0 -74.0578736364841,40.8840190508406,0 -74.0580114349723,40.8840170229939,0 -74.0581794083118,40.883808154444,0 -74.0583182126284,40.8837916781347,0 -74.0586008504033,40.8839551736376,0 -74.0584868565202,40.8840162625513,0 -74.0586286783218,40.8840768444474,0 -74.0586538240314,40.883964045475,0 -74.058338329196,40.8837582185402,0 -74.0581841021776,40.8837807784202,0 -74.0581442043185,40.883791424653,0 -74.0577586367726,40.8845293058086,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML20</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML20</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,2,masks, 14:50, got Starbucks and walked back to hospital, touched handicap railing and door. 15:03.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.057693593204,40.8843924270677,0 -74.0579071640968,40.8840002932557,0 -74.0579712018371,40.8840454128429,0 -74.058100618422,40.8838134775585,0 -74.0583222359419,40.8838215889701,0 -74.0586350485682,40.8840129673001,0 -74.0583678334951,40.883776722712,0 -74.0581076592207,40.8837665834404,0 -74.0579695254564,40.8839850843991,0 -74.0579168871045,40.8839544131943,0 -74.0576912462711,40.8843769648217,0 -74.0567491203547,40.8841196826584,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML21</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML21</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask, 15:13, touching brief case, went into medical building next to Starbucks, touched door. 15:19.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.05712261796,40.8842677150795,0 -74.0576305612922,40.8845148575104,0 -74.0578726306558,40.8840426245547,0 -74.0579889714718,40.8840659447798,0 -74.0581160411239,40.8837797644932,0 -74.058314524591,40.8838332491226,0 -74.0589052811265,40.8841549164325,0 -74.0588187798858,40.8842750659959,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML22</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML22</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1, mask, 15:25, walked down street, went down side street, got in car and left. 15:32.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0576131269336,40.8843898922735,0 -74.0576932579279,40.8844132123762,0 -74.057400226593,40.8849906357762,0 -74.0569180995226,40.8848159898096,0 -74.0568339452148,40.8848377888959,0 -74.0567608550191,40.88495236072,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210128ML23</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210128ML23</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M&amp;F,2,masks, 15:40, walked up to bus stop, M leaned against the wall, F on phone. 15:50.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210128ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210128ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0574216842651,40.8843521238289,0 -74.0576694533229,40.8844167610867,0 -74.0582514926791,40.883356702086,0 -74.057846814394,40.8831280596833,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210130PT01</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210130PT01</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 2, Mask, 11:10, got on and off the car 2x, companion helped them get in car, touched car trunk, face and hair, touched hospital flag post and grass, 11:20</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210130PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210130PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083207890391,32.6337794832338,0 -117.08508644253,32.6327234968635,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210130PT02</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210130PT02</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 2, mask, 11:24, waiting around hospital entrance, talked to person sitting on bench, holding water bottle &amp; phone and touched face 2x, sat on ground and leaned/touched bike rack, hospital walls, light post 4x total, 11:44 &lt;br&gt;Notes: kept 6ft distance</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210130PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210130PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083398327231,32.6337187784726,0 -117.084228806198,32.6335067350068,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210130PT03</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210130PT03</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, scrubs and mask, 11:59, got in car, holding trash bag with belongings and texting on phone, 12:10&lt;br&gt;Notes: looked through belonging in trash can, touched majority items</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210130PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210130PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083669900894,32.633599345264,0 -117.083635032177,32.6331162461911,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210130PT04</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210130PT04</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 12:11, got in car, holding folder &amp; looking through phone before driving, 12: 14&lt;br&gt;Notes: Took mask off in car </value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210130PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210130PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083589434624,32.6335688516533,0 -117.084051780403,32.6332766206904,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210130PT05</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210130PT05</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 2, mask, 12:16, waiting at hospital entrance, talked to companion and was given a back rub, touched face 1x, leaned on light post and art statues then laid down on bench to nap, 12:36 &lt;br&gt;Notes: Subjects back touched multiple surfaces before companio</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210130PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210130PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083637714386,32.6335406168193,0 -117.083379551768,32.6331537986964,0 -117.083133794367,32.6332300330573,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210130PT06</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210130PT06</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask &amp; scrubs &amp; hair net, 12:55, talked on phone, had water bottle and touched face 2x, sat on bench, 13:03&lt;br&gt;Note: put mask on bench </value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210130PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210130PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083625644445,32.633533275761,0 -117.083429843187,32.6332283389611,0 -117.083338648081,32.6337811773196,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210130PT07</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210130PT07</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask, 13:06, sat on floor and was on phone while waited for ride, had backpack and pillow, touched asphalt, 13:25&lt;br&gt;Note: When subject got ride the companion carried belongings and gave hugs</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210130PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210130PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083611562848,32.6336436739203,0 -117.08404943347,32.6335600988557,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210130PT08</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210130PT08</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 2, mask, 13:28, got in car, held child’s hand and phone, 13:32&lt;br&gt;Note: child touched multiple surfaces before getting to car</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210130PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210130PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083575353026,32.6335863572459,0 -117.083377204835,32.6331571868916,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210130PT09</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210130PT09</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 13:51, went to car for something and back to hospital, carrying backpack, touched hospital bathroom door/área, 13:58</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210130PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210130PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.08347376436,32.6335380756838,0 -117.083302773535,32.6330679643753,0 -117.083596140146,32.6336563795821,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210130PT10</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210130PT10</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 14:24, went to adjacent building, carrying backpack and phone, 14:44&lt;br&gt;Note: lost track of subject </value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210130PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210130PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083632685244,32.6335691340016,0 -117.083335630596,32.632995965128,0 -117.082503810525,32.6331715867198,0 -117.082512527704,32.6338771754607,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210131PT01</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210131PT01</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 12:10, sat on bench and handled phone, touched bench, 12:28</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210131PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210131PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083778865635,32.6338170354608,0 -117.085049562156,32.6334948763694,0 -117.083316855133,32.633531864019,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210131PT02</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210131PT02</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask, 12:36, dropped off belongings in car and went back to hospital, hugged their driver, holding car keys and discharge bag, 12:56</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210131PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210131PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083311155438,32.6338147766807,0 -117.083000354469,32.6332249507686,0 -117.083762772381,32.6339347742959,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210131PT03</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210131PT03</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 13:00, got in car, holding phone and lunch bag (opened trunk to put bag in), 13:03</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210131PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210131PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083685323596,32.6337320488192,0 -117.084118165076,32.633580710281,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210131PT04</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210131PT04</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask &amp; scrubs, 13:12, got in car, Holding Purse and coffee cup, 13:32</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210131PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210131PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083800323307,32.633690261338,0 -117.084482945502,32.6330603409283,0 -117.083569988608,32.6337986828706,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210131PT05</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210131PT05</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 14:05, Got in car, 14:08</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210131PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210131PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083714492619,32.6336919554254,0 -117.084308937192,32.6335002409912,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210131PT06</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210131PT06</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask &amp; scrubs &amp; haircap, 14:20, got in car, holding jacket &amp; backpack &amp; touched face 2x, placed items on hospital art statues &amp; light post, 14:25</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210131PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210131PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083752043545,32.6337379781224,0 -117.084217071533,32.6335694163499,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210131PT07</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210131PT07</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, scrubs &amp; mask, 14:28, had lunch, on phone &amp; touched face 2x, sat on hospital bench, 14:48</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210131PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210131PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083599828184,32.6335908748176,0 -117.084149345756,32.6335279111411,0 -117.083633691072,32.6336676735021,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210131PT08</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210131PT08</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask &amp; scrubs, 14:57, got in car, holding purse and phone, 15:06 </value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210131PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210131PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083828486502,32.6336592030622,0 -117.08425629884,32.6335104055371,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210131PT09</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210131PT09</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F, 1, mask, 15:22, got in car, holding paperwork, pressed key pad to exit parking lot, 15:26</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210131PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210131PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083623297513,32.6335307346253,0 -117.08334300667,32.6331210461362,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210131PT10</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210131PT10</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M, 1, mask, 15:46, got in car, carrying backpack, 15:52</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210131PT Capa sin título</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210131PT.kmz|layername=Capa sin título</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-117.083720527589,32.6336908260338,0 -117.084450423717,32.6334172304902,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210203ML01</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210203ML01</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask/sunglasses, 11:32, picked up Starbucks, walked down st to apt. building, touched doors phone and coffee. 11:50</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210203ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210203ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0568912774324,40.8843024418152,0 -74.0576054155827,40.8845630184921,0 -74.0578608959913,40.884054538149,0 -74.0579769015312,40.8840740561605,0 -74.0582585334778,40.8838335026041,0 -74.0586632117629,40.8840322318431,0 -74.0585508942604,40.8840983902966,0 -74.0587151795626,40.8840243739381,0 -74.0583208948374,40.883737179544,0 -74.0581371635199,40.8838094218523,0 -74.0579758957028,40.8841371728076,0 -74.0571162477136,40.8858134173954,0 -74.0567404031754,40.8865925917899,0 -74.05657812953,40.8866019702157,0 -74.0563729405403,40.8865740884055,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210203ML02</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210203ML02</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,mask, gloves, 12:04, talking on phone, went into medical building next to Starbucks. touched doors. 12:10.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210203ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210203ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0568460151553,40.8843310850215,0 -74.0575980395079,40.8845531328197,0 -74.0578722953796,40.8840773514086,0 -74.0579671785235,40.8840879975937,0 -74.0581247583032,40.8838099288156,0 -74.0583004429936,40.8837853410916,0 -74.0587966516614,40.8841080225564,0 -74.0587822347879,40.88418051794,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210203ML03</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210203ML03</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask (not worn properly), gloves, 12:13, talking on phone whole time, standing near ramp. 12:30.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210203ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210203ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.057495445013,40.8845293058086,0 -74.0575879812241,40.8845632719708,0 -74.0578635782003,40.8840520033419,0 -74.057989642024,40.8840809001372,0 -74.0581502392888,40.883808154444,0 -74.0583299472928,40.8838076474807,0 -74.0584023669362,40.8838441488285,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210203ML04</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210203ML04</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>F,1,no mask, glasses, gloves, 12:34, walked to corner where bus stop is, turned around and  walked back to hospital, touched hat. 12:46.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210203ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210203ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0573663637042,40.8843244945504,0 -74.0576781705022,40.8844160006488,0 -74.058248475194,40.883356702086,0 -74.0581126883626,40.8832725455507,0 -74.0582786500454,40.8833668414204,0 -74.0577606484294,40.8843447729211,0 -74.0576516836882,40.8844492064316,0 -74.0569442510605,40.884178236618,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210203ML05</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210203ML05</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask, 12:51, walked up street and went into apartment building, touched door touched phone. 12:57.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210203ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210203ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0573539584875,40.8843465472782,0 -74.0576550364494,40.8844281676551,0 -74.0582032129169,40.8834847110686,0 -74.0581214055419,40.8834251425629,0</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>20210203ML06</name>
+      <ExtendedData>
+        <Data name="name">
+          <value>20210203ML06</value>
+        </Data>
+        <Data name="stroke">
+          <value>#ff0000</value>
+        </Data>
+        <Data name="stroke-opacity">
+          <value>1</value>
+        </Data>
+        <Data name="fill-opacity">
+          <value>0</value>
+        </Data>
+        <Data name="descriptio">
+          <value>M,1,mask/scrubs, 12:59, (had visible ID badge) hands in pockets, walked into medical building next to Starbucks. touched doors. 13:05.</value>
+        </Data>
+        <Data name="tessellate">
+          <value>1</value>
+        </Data>
+        <Data name="extrude">
+          <value>0</value>
+        </Data>
+        <Data name="visibility">
+          <value>-1</value>
+        </Data>
+        <Data name="layer">
+          <value>20210203ML Untitled layer</value>
+        </Data>
+        <Data name="path">
+          <value>C:/Users/Pete/Desktop/websitetest2/20210203ML.kmz|layername=Untitled layer</value>
+        </Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.057022370398,40.8842471832052,0 -74.0576034039259,40.8844920444016,0 -74.057854861021,40.8840682261057,0 -74.0579943358898,40.8840999111798,0 -74.0581016242504,40.8838200680805,0 -74.0582675859332,40.8838291934176,0 -74.0588187798858,40.884115626971,0 -74.0587604418397,40.8842157516817,0</coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>
+
