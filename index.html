@@ -141,12 +141,6 @@
                 return null;
             }
         }
-    
-        var urlp = getURLArguements();
-        if(!urlp==null){
-            alert(urlp['date']);
-        }
-
 
         var info = null; 
         var layer = null;
@@ -256,14 +250,14 @@
             info.update = function (props) {
                 if(props==null){this._div.innerHTML = ""; return;}
                 this._div.innerHTML = "";
-                this._div.innerHTML += props.properties.name + "<br>";
-                this._div.innerHTML += props.properties.username + "<br>";
-                this._div.innerHTML += props.geometry.coordinates[0] + "<br>";
-                this._div.innerHTML += props.properties.state_district + "<br>";
-                this._div.innerHTML += props.properties.country + "<br>";
-                this._div.innerHTML += "Number of people:"+props.properties.number_of_people + "<br>";
-                this._div.innerHTML += "Has mask:"+props.properties.has_mask + "<br>";
-                this._div.innerHTML += "Full description:"+props.properties.description + "<br>";
+                this._div.innerHTML += "Layer name: "+ props.properties.name + "<br>";
+                this._div.innerHTML += "Captured by user: "+ props.properties.username + "<br>";
+                this._div.innerHTML += "Latitude, Longitude: " + props.geometry.coordinates[0][1] + " , " + props.geometry.coordinates[0][0] + "<br>";
+                this._div.innerHTML += "State/district: " + props.properties.state_district + "<br>";
+                this._div.innerHTML += "Country: " + props.properties.country + "<br>";
+                this._div.innerHTML += "Number of people: "+props.properties.number_of_people + "<br>";
+                this._div.innerHTML += "Has mask: "+props.properties.has_mask + "<br>";
+                this._div.innerHTML += "Full description: "+props.properties.description + "<br>";
             };
             info.addTo(mymap);
         };
@@ -310,6 +304,7 @@
                 
                 var main = document.createElement("ul");
                 main.classList.add("flowable");
+                main.id = "content_files";
                 var contents = [];
                 
                 data.items.forEach(function(element){
@@ -323,6 +318,9 @@
                 
                 contents.sort(custom_sort);
                 
+                var s = location.toString().split('?');
+                var base_url = s[0];
+                //console.log("base_url:",base_url);
                 
                 contents.forEach(function(element){
                     //console.log(element);
@@ -333,8 +331,12 @@
                         
                     var inner_tag = document.createElement("a");
                     var link = document.createTextNode(date);
-                        
-                    inner_tag.href = start_url+path;
+                    
+                    //console.log("path is: ", base_url+path);
+                    
+                    var full_link = base_url+path;
+                    
+                    inner_tag.href = base_url+"?url="+full_link;
                     inner_tag.appendChild(link);
                         
                     outer_tag.appendChild(inner_tag);
@@ -359,9 +361,36 @@
             await sleep(2000);
             console.log("wait complete for DB");
             
-            getFiles();   
+            await getFiles();   
             
-            loadData("./Data/12_01_2021.kml");
+            var urlp = getURLArguements();
+            
+            if(urlp==null){
+                console.log("no file specified");
+                
+                var loop_wait = true;
+                while(loop_wait){
+                    var element = document.getElementById("content_files");
+                    if(element==null){ await sleep(100); }
+                    else{loop_wait = false; }
+                }
+                
+                //console.log(element);
+                var length = element.childNodes.length;
+                var file_url = element.childNodes[length-1].lastChild.href.split("?");
+                var file = file_url[1].replace("url=","");
+                
+                console.log("loading most recent file ", file);
+                
+                loadData(file);
+            }else{
+                console.log("worked");
+                var url = urlp['url'];
+                if(url.charAt(url.length - 1) == '/'){
+                    url = url.slice(0, -1);
+                }
+                loadData(url);
+            }
         }
         
         function simpleReverseGeocoding(longitude, latitude) {
