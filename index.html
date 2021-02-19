@@ -436,10 +436,10 @@
                     
                     try{
                         var res = null;
-                        if ('descriptio' in layer.feature.properties){   
+                        if (layer.feature.properties.hasOwnProperty('descriptio')){   
                             res = layer.feature.properties.descriptio.split(",");
                         }
-                        if ('description' in layer.feature.properties){   
+                        if (layer.feature.properties.hasOwnProperty('description')){   
                             res = layer.feature.properties.description.split(",");
                         }
                         var gender = res[0];
