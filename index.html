@@ -290,7 +290,7 @@
         };
         
         function custom_sort(a, b) {
-            return new Date(a.date).getTime() - new Date(b.date).getTime();
+            return new Date(a.us_date).getTime() - new Date(b.us_date).getTime();
         }
         
         async function getFiles(){
@@ -309,18 +309,21 @@
                 
                 data.items.forEach(function(element){
                     var date = element.name.split(".")[0].replace(/_/g,"/");
+                    var temp = date.split("/");
+                    var us_date = date[1]+"/"+date[0]+"/"+date[2];
+                    
                     if (!isNaN(date.charAt(0))){
                         var path = element.path;
                         
-                        contents.push({'path':path,'date':date});
+                        contents.push({'path':path,'date':date, 'us_date':us_date});
                     }
                 });
                 
-                contents.sort(custom_sort);
+                
+                contents = contents.sort(custom_sort).reverse();
                 
                 var s = location.toString().split('?');
                 var base_url = s[0];
-                //console.log("base_url:",base_url);
                 
                 contents.forEach(function(element){
                     //console.log(element);
