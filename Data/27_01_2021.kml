@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>20210127CC</name>
+    <description/>
+    <Style id="line-000000-1200-normal">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.2</width>
+      </LineStyle>
+    </Style>
+    <Style id="line-000000-1200-highlight">
+      <LineStyle>
+        <color>ff000000</color>
+        <width>1.8</width>
+      </LineStyle>
+    </Style>
+    <StyleMap id="line-000000-1200">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#line-000000-1200-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#line-000000-1200-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Untitled layer</name>
+      <Placemark>
+        <name>20210127CC01a</name>
+        <description>M, 1, mask half on, 14:05 uses automatic door to exit building, touches car door, touches bags (food delivery), re-enters building using automatic door</description>
+        <styleUrl>#line-000000-1200</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -96.9915419,32.9868932,0
+            -96.9917565,32.9869607,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>20210127CC01b</name>
+        <description>M, 1, mask half on, 14:05, uses automatic door to exit building again, touches mask, touches car door, and drives away, 14:20</description>
+        <styleUrl>#line-000000-1200</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -96.9917565,32.9869607,0
+            -96.9915634,32.9869337,0
+            -96.9917404,32.9869202,0
+            -96.9928455,32.9867538,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>20210127CC02</name>
+        <description>M, 1, mask, 14:40, uses automatic door to exit building, touches clipboard in hand (handyman), touches car keys and car doors, enters car and drives away, 15:00</description>
+        <styleUrl>#line-000000-1200</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -96.9915258,32.9868573,0
+            -96.9917619,32.9868393,0
+            -96.9915205,32.9866728,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>20210127CC03a</name>
+        <description>M, 1, mask, 15:30, touches door handle to exit building, touches car keys and car door, drives to Market Street</description>
+        <styleUrl>#line-000000-1200</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -96.9915259,32.9869877,0
+            -96.9917297,32.9871047,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>20210127CC03b</name>
+        <description>M, 1, mask, 15:30, parks car and touches car door to exit car, uses automatic door to enter Market Street, 15:42</description>
+        <styleUrl>#line-000000-1200</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -96.9917297,32.9871047,0
+            -96.9916761,32.9886796,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>20210127CC04</name>
+        <description>F, 1, mask, 16:10, uses automatic door to exit building, takes mask off in car, exits car, touches back seat car door, and re-enters car, 16:13</description>
+        <styleUrl>#line-000000-1200</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -96.9914851,32.9869855,0
+            -96.9915924,32.987098,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>20210127CC05
+</name>
+        <description>F, 1, mask, 16:24, touches door handle to exit building, touches car keys and car door, drives away, 16:35</description>
+        <styleUrl>#line-000000-1200</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -96.9915441,32.986954,0
+            -96.9917131,32.9870057,0
+            -96.9926921,32.9867312,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>20210127CC06</name>
+        <description>M, 1, mask, 17:03, uses automatic door to exit building, touches car keys and car doors, drives away, 17:05</description>
+        <styleUrl>#line-000000-1200</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -96.9915919,32.9869904,0
+            -96.9917019,32.9870511,0
+            -96.9920506,32.9873931,0
+            -96.9932093,32.9878611,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>20210127CC07a</name>
+        <description>F, 1, mask, 17:35, uses automatic door to exit building, touches phone, talks on phone, touches car keys and car doors, enters car</description>
+        <styleUrl>#line-000000-1200</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -96.9916096,32.9868894,0
+            -96.9917249,32.9869029,0
+            -96.9916471,32.9871009,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>20210127CC07b</name>
+        <description>F, 1, mask, 17:35, touches car doors and exit car, touches COVID testing entrance door handle and enters building, 17:55</description>
+        <styleUrl>#line-000000-1200</styleUrl>
+        <LineString>
+          <tessellate>1</tessellate>
+          <coordinates>
+            -96.9916471,32.9871009,0
+            -96.9913038,32.9869772,0
+          </coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
